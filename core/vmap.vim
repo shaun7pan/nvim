@@ -3,7 +3,7 @@ nnoremap <LEADER>vi :e $MYVIMRC<CR>
 map R :source $MYVIMRC <CR>
 map E $
 map B ^
-nnoremap <C-w> :bd<CR>
+nnoremap <leader>w :bd<CR>
 " map jk to ESC
 inoremap jk <Esc>
 " See plugin/bufkill.vim
@@ -86,3 +86,17 @@ map tn :tabe <CR>
 map th :-tabnext <CR>
 map tl :+tabnext <CR>
 
+" Make vim help in new tab
+" Only apply to .txt files as help files will always be txt files
+augroup HelpInTabs
+    autocmd!
+    autocmd BufEnter *.txt  call HelpInNewTab()
+augroup END
+
+" Only apply to .txt files...
+function! HelpInNewTab ()
+    if &buftype == 'help'
+        " Convert the help window to a tab...
+        execute "normal \<C-W>T"
+    endif
+endfunction
