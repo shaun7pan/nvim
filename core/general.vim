@@ -1,5 +1,6 @@
 
 "General settins{{{
+set cursorline               " highlight current line
 set mouse=nv                 " Disable mouse in command-line mode
 set report=0                 " Don't report on line changes
 set errorbells               " Trigger bell on error
@@ -14,6 +15,7 @@ set synmaxcol=2500           " Don't syntax highlight long lines
 set formatoptions+=1         " Don't break lines after a one-letter word
 set formatoptions-=t         " Don't auto-wrap text
 set formatoptions-=o         " Disable comment-continuation (normal 'o'/'O')
+set autowrite
 if has('patch-7.3.541')
 	set formatoptions+=j       " Remove comment leader when joining lines
 endif
@@ -135,8 +137,8 @@ augroup END
 " ----------------
 set textwidth=80    " Text width maximum chars before wrapping
 set noexpandtab     " Don't expand tabs to spaces
-set tabstop=2       " The number of spaces a tab is
-set shiftwidth=2    " Number of spaces to use in auto(indent)
+set tabstop=4       " The number of spaces a tab is
+set shiftwidth=4    " Number of spaces to use in auto(indent)
 set softtabstop=-1  " Automatically keeps in sync with shiftwidth
 set smarttab        " Tab insert blanks according to 'shiftwidth'
 set autoindent      " Use same indenting on new lines
