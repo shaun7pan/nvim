@@ -60,9 +60,10 @@ nnoremap <silent> <leader>ct  :Clap coc_outline<CR>
 
 "fzf
 
-function! s:find_git_root()
-  return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
-endfunction
-
-command! ProjectFiles execute 'Files' s:find_git_root()
-nnoremap <silent> <C-t> :ProjectFiles<CR>
+"function! s:find_git_root()
+"  return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
+"endfunction
+"
+"command! ProjectFiles execute 'Files' s:find_git_root()
+"nnoremap <silent> <Leader>ff :Files<CR>
+"nnoremap <silent> <Leader>bb :Buffers<CR>

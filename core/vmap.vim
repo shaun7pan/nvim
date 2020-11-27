@@ -10,7 +10,8 @@ inoremap jk <Esc>
 " use emacs keybind
 nmap <C-x>k :BD<CR>
 "Write buffer (save)
-nnoremap <C-s> :<C-u>write<CR>
+nnoremap <C-S> :<C-u>write<CR>
+nnoremap <C-Q> :q!<CR>
 "yank to end
 nnoremap Y y$
 " Whitespace jump (see plugin/whitespace.vim)
@@ -100,3 +101,6 @@ function! HelpInNewTab ()
         execute "normal \<C-W>T"
     endif
 endfunction
+
+
+nnoremap gb :ls<CR>:b<Space>
