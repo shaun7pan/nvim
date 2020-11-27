@@ -1,7 +1,8 @@
 
-let s:zshrc = expand($HOME . '/.zshrc')
+let s:profile = expand($HOME . '/.profile')
 let s:tmux_conf = expand($HOME . '/.tmux.conf')
 let s:vmap_conf = expand($HOME . '/.config/nvim/core/vmap.vim')
+let s:clap_conf = expand($HOME . '/.config/nvim/modules/fuzzyfind/config.vim')
 let g:clap_cache_directory = $DATA_PATH . '/clap'
 let g:clap_theme = 'material_design_dark'
 let g:clap_current_selection_sign= { 'text': '➤', 'texthl': "ClapCurrentSelectionSign", "linehl": "ClapCurrentSelection"}
@@ -11,7 +12,7 @@ let g:clap_search_box_border_style = 'curve'
 let g:clap_provider_grep_enable_icon = 1
 let g:clap_prompt_format = '%spinner%%forerunner_status% %provider_id%: '
 let g:clap_provider_personalconf = {
-      \ 'source': [s:zshrc,s:tmux_conf,s:vmap_conf],
+      \ 'source': [s:profile,s:tmux_conf,s:vmap_conf,s:clap_conf],
       \ 'sink': 'e',
       \ }
 
