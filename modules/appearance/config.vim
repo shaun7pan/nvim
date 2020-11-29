@@ -20,6 +20,8 @@ nmap <leader>0 <Plug>BuffetSwitch(10)
 let g:spaceline_seperate_style = 'slant'
 let g:buffet_always_show_tabline = 1
 
+let g:buffet_use_devicons = 1
+
 call defx#custom#option('_', {
   \ 'resume': 1,
   \ 'winwidth': 30,

@@ -34,11 +34,11 @@ Plug 'hardcoreplayers/oceanic-material'
 
 Plug 'hardcoreplayers/dashboard-nvim'
 
-Plug 'hardcoreplayers/vim-buffet'
 
 Plug 'glepnir/spaceline.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'bagrat/vim-buffet'
 
 Plug 'Shougo/defx.nvim'
 Plug 'kristijanhusak/defx-icons'
