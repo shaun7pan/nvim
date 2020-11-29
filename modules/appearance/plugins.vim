@@ -1,5 +1,4 @@
 
-Plug 'ryanoasis/vim-devicons'
 
 
 Plug 'drewtempelmeyer/palenight.vim'
@@ -37,7 +36,9 @@ Plug 'hardcoreplayers/dashboard-nvim'
 
 Plug 'hardcoreplayers/vim-buffet'
 
-Plug 'hardcoreplayers/spaceline.vim'
+Plug 'glepnir/spaceline.vim'
+Plug 'ryanoasis/vim-devicons'
+Plug 'kyazdani42/nvim-web-devicons'
 
 Plug 'Shougo/defx.nvim'
 Plug 'kristijanhusak/defx-icons'
