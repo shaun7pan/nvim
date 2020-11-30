@@ -1,5 +1,8 @@
 
 Plug 'machakann/vim-sandwich'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'gcmt/wildfire.vim'
 
 Plug 'kana/vim-operator-user'
 Plug 'kana/vim-operator-replace'
@@ -10,3 +13,4 @@ Plug 'AndrewRadev/dsf.vim'
 Plug 'kana/vim-niceblock'
 Plug 'osyo-manga/vim-textobj-multiblock'
 Plug 'kana/vim-textobj-function'
+
