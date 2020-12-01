@@ -14,6 +14,8 @@ nnoremap <C-S> :<C-u>write<CR>
 nnoremap <C-Q> :q!<CR>
 "yank to end
 nnoremap Y y$
+noremap <Leader>y "*y
+
 " Whitespace jump (see plugin/whitespace.vim)
 nnoremap ]w :<C-u>WhitespaceNext<CR>
 nnoremap [w :<C-u>WhitespacePrev<CR>

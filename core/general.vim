@@ -44,9 +44,9 @@ if has('mac')
 		\ }
 endif
 
-if has('clipboard')
-	set clipboard& clipboard+=unnamedplus
-endif
+"if has('clipboard')
+"	set clipboard& clipboard+=unnamedplus
+"endif
 
 " Wildmenu {{{
 " --------
