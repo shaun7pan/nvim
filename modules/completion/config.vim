@@ -98,6 +98,8 @@ nnoremap <expr><C-b> coc#util#has_float() ? coc#util#float_scroll(0) : "\<C-b>"
 "xmap <silent> <TAB> <Plug>(coc-range-select)
 " Add :OR command for organize imports of the current buffer.
 command! -nargs=0 OR  :call CocAction('runCommand', 'editor.action.organizeImport')
+autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
+
 nnoremap <silent> <Leader>co :<C-u>OR<CR>
 " multiple cursors
 nmap <silent><M-s> <Plug>(coc-cursors-position)
