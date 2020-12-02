@@ -1,6 +1,5 @@
 " open vimrc and edit
 nnoremap <LEADER>vi :e $MYVIMRC<CR>
-map R :source $MYVIMRC <CR>
 map E $
 map B ^
 nnoremap <leader>w :bd<CR>
@@ -14,8 +13,15 @@ nnoremap <C-S> :<C-u>write<CR>
 nnoremap <C-Q> :q!<CR>
 "yank to end
 nnoremap Y y$
-noremap <Leader>y "*y
+noremap <Leader>y "+y
+noremap <Leader>p "+p
 
+"make J work as leader+j
+noremap j gj
+noremap k gk
+noremap <leader>j J
+noremap <silent> K 5k
+noremap <silent> J 5j
 " Whitespace jump (see plugin/whitespace.vim)
 nnoremap ]w :<C-u>WhitespaceNext<CR>
 nnoremap [w :<C-u>WhitespacePrev<CR>

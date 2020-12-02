@@ -79,7 +79,7 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> <Leader>ci <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 " Use K for show documentation in float window
-nnoremap <silent> K :call CocActionAsync('doHover')<CR>
+nnoremap <silent> <leader>k :call CocActionAsync('doHover')<CR>
 " use <c-space> for trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
 nmap ]g <Plug>(coc-git-prevchunk)
