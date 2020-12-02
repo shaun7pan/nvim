@@ -13,6 +13,7 @@ nnoremap <C-S> :<C-u>write<CR>
 nnoremap <C-Q> :q!<CR>
 "yank to end
 nnoremap Y y$
+vnoremap Y "+y
 noremap <Leader>y "+y
 noremap <Leader>p "+p
 
