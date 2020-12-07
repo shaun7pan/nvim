@@ -67,3 +67,6 @@ endfor
 set secure
 
 " vim: set ts=2 sw=2 tw=80 noet :
+
+"Fix No newline at end of file
+set nofixendofline
