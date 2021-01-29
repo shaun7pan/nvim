@@ -8,6 +8,11 @@
       "filetypes": ["go"]
     }
   },
+  "snippets.ultisnips.directories": [
+      "$HOME/.cache/vim/plug/repos/vim-snippets/UltiSnips/",
+      "$HOME/.cache/vim/plug/repos/vim-snippets/snippets/",
+      "$HOME/.config/nvim/Ultisnips/"
+  ],
   "suggest.triggerAfterInsertEnter": false,
   "suggest.timeout": 500,
   "suggest.noselect": false,
