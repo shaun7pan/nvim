@@ -169,8 +169,9 @@ let g:defx_icons_mark_icon = ''
 
 nnoremap <silent> <Leader>e
   \ :<C-u>Defx -resume -toggle -buffer-name=tab`tabpagenr()`<CR>
+
 nnoremap <silent> <Leader>F
-  \ :<C-u>Defx -resume -buffer-name=tabtabpagenr()` -search=`expand('%:p')`<CR>
+  \ :<C-u>Defx -resume -buffer-name=tab`tabpagenr()` -search=`expand('%:p')`<CR>
 
 nnoremap <silent> <Leader>b
   \ :<C-u>Defx `escape(expand('%:p:h'), ' :')` -search=`expand('%:p')`<CR>
