@@ -175,4 +175,3 @@ nnoremap <silent> <Leader>F
 
 nnoremap <silent> <Leader>b
   \ :<C-u>Defx `escape(expand('%:p:h'), ' :')` -search=`expand('%:p')`<CR>
-

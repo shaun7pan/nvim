@@ -31,11 +31,11 @@ autocmd User ClapOnEnter call s:ClapSymbolHL()
 "     vim-clap Keymap      "
 "--------------------------"
 nnoremap <silent> <Leader>tc :<C-u>Clap colors<CR>
-nnoremap <silent> <Leader>bb :<C-u>Clap buffers<CR>
-nnoremap <silent> <Leader>fa :<C-u>Clap grep2<CR>
-nnoremap <silent> <Leader>fb :<C-u>Clap marks<CR>
+nnoremap <silent> <Leader>bb :<C-u>Clap marks<CR>
 "like emacs counsel-find-file
 nnoremap <silent> <C-x><C-f> :<C-u>Clap filer<CR>
+nnoremap <silent> <Leader>fa :<C-u>Clap grep2<CR>
+nnoremap <silent> <Leader>fb :<C-u>Clap buffers<CR>
 nnoremap <silent> <Leader>ff :<C-u>Clap files ++finder=rg --ignore --hidden --files<cr>
 nnoremap <silent> <Leader>fg :<C-u>Clap gfiles<CR>
 nnoremap <silent> <Leader>fw :<C-u>Clap grep ++query=<cword><cr>
@@ -67,5 +67,6 @@ nnoremap <silent> <leader>ct  :Clap coc_outline<CR>
 "endfunction
 "
 "command! ProjectFiles execute 'Files' s:find_git_root()
-"nnoremap <silent> <Leader>ff :Files<CR>
+nnoremap <silent> <C-x><C-t> :Files<CR>
+nnoremap <silent> <C-x><C-h> :Files ~<CR>
 "nnoremap <silent> <Leader>bb :Buffers<CR>
