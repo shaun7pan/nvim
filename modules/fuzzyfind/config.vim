@@ -70,3 +70,6 @@ nnoremap <silent> <leader>ct  :Clap coc_outline<CR>
 nnoremap <silent> <C-x><C-t> :Files<CR>
 nnoremap <silent> <C-x><C-h> :Files ~<CR>
 "nnoremap <silent> <Leader>bb :Buffers<CR>
+"
+nnoremap <silent> <C-x><C-r> :History:<CR>
+nnoremap <silent> <C-x><C-h> :History/<CR>
