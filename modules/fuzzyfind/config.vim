@@ -71,5 +71,5 @@ nnoremap <silent> <C-x><C-t> :Files<CR>
 nnoremap <silent> <C-x><C-h> :Files ~<CR>
 "nnoremap <silent> <Leader>bb :Buffers<CR>
 "
-nnoremap <silent> <C-x><C-r> :History:<CR>
-nnoremap <silent> <C-x><C-h> :History/<CR>
+nnoremap <silent> <C-x><C-m> :History:<CR>
+nnoremap <silent> <C-x><C-n> :History/<CR>
