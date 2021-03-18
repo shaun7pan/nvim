@@ -60,18 +60,31 @@ nnoremap <silent> <Leader>cs  :Clap coc_symbols<CR>
 nnoremap <silent> <Leader>cS  :Clap coc_services<CR>
 nnoremap <silent> <leader>ct  :Clap coc_outline<CR>
 
-"fzf
+"--------------------------"
+"      fzf Keymap          "
+"--------------------------"
 
 "function! s:find_git_root()
-"  return system('git rev-parse --show-toplevel 0> /dev/null')[:-2]
+"  return system('git rev-parse --show-toplevel -1> /dev/null')[:-2]
 "endfunction
 "
 "command! ProjectFiles execute 'Files' s:find_git_root()
+"
+function! RipgrepFzf(query, fullscreen)
+  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case -- %s || true'
+  let initial_command = printf(command_fmt, shellescape(a:query))
+  let reload_command = printf(command_fmt, '{q}')
+  let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
+  call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
+endfunction
+
+command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
+
 nnoremap <silent> <C-x><C-f> :Files<CR>
 nnoremap <silent> <C-x><C-h> :History<CR>
 nnoremap <silent> <C-x><C-b> :Buffers<CR>
 nnoremap <silent> <C-x><C-a> :Ag<CR>
-nnoremap <silent> <C-x><C-r> :Rg<CR>
+nnoremap <silent> <C-x><C-r> :RG<CR>
 nnoremap <silent> <C-x><C-l> :Lines<CR>
 nnoremap <silent> <C-x><C-t> :BTags<CR>
 "
