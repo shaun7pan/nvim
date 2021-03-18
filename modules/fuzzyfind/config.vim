@@ -33,9 +33,9 @@ autocmd User ClapOnEnter call s:ClapSymbolHL()
 nnoremap <silent> <Leader>tc :<C-u>Clap colors<CR>
 nnoremap <silent> <Leader>bb :<C-u>Clap marks<CR>
 "like emacs counsel-find-file
-nnoremap <silent> <C-x><C-f> :<C-u>Clap filer<CR>
 nnoremap <silent> <Leader>fa :<C-u>Clap grep2<CR>
 nnoremap <silent> <Leader>fb :<C-u>Clap buffers<CR>
+nnoremap <silent> <Leader>fd :<C-u>Clap filer<CR>
 nnoremap <silent> <Leader>ff :<C-u>Clap files ++finder=rg --ignore --hidden --files<cr>
 nnoremap <silent> <Leader>fg :<C-u>Clap gfiles<CR>
 nnoremap <silent> <Leader>fw :<C-u>Clap grep ++query=<cword><cr>
@@ -63,13 +63,17 @@ nnoremap <silent> <leader>ct  :Clap coc_outline<CR>
 "fzf
 
 "function! s:find_git_root()
-"  return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
+"  return system('git rev-parse --show-toplevel 0> /dev/null')[:-2]
 "endfunction
 "
 "command! ProjectFiles execute 'Files' s:find_git_root()
-nnoremap <silent> <C-x><C-t> :Files<CR>
-nnoremap <silent> <C-x><C-h> :Files ~<CR>
-"nnoremap <silent> <Leader>bb :Buffers<CR>
+nnoremap <silent> <C-x><C-f> :Files<CR>
+nnoremap <silent> <C-x><C-h> :History<CR>
+nnoremap <silent> <C-x><C-b> :Buffers<CR>
+nnoremap <silent> <C-x><C-a> :Ag<CR>
+nnoremap <silent> <C-x><C-r> :Rg<CR>
+nnoremap <silent> <C-x><C-l> :Lines<CR>
+nnoremap <silent> <C-x><C-t> :BTags<CR>
 "
 nnoremap <silent> <C-x><C-m> :History:<CR>
 nnoremap <silent> <C-x><C-n> :History/<CR>
