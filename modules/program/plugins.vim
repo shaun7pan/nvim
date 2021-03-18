@@ -5,7 +5,7 @@ Plug 'Yggdroot/indentLine'
 
 Plug 'tyru/caw.vim'
 
-Plug 'liuchengxu/vista.vim',{'on': ['Vista', 'Vista!', 'Vista!!']}
+Plug 'liuchengxu/vista.vim'
 
 if executable('ctags')
 	Plug 'ludovicchabant/vim-gutentags'

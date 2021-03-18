@@ -35,7 +35,9 @@ Plug 'hardcoreplayers/oceanic-material'
 Plug 'hardcoreplayers/dashboard-nvim'
 
 
-Plug 'glepnir/spaceline.vim'
+"Plug 'glepnir/spaceline.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'bagrat/vim-buffet'

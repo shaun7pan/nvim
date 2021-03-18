@@ -77,3 +77,4 @@ nnoremap <silent> <C-x><C-t> :BTags<CR>
 "
 nnoremap <silent> <C-x><C-m> :History:<CR>
 nnoremap <silent> <C-x><C-n> :History/<CR>
+nnoremap <silent> <C-Space> :call fzf#run(fzf#wrap({'source': 'find $HOME/development -maxdepth 1 -type d', 'sink': 'Files'}))<CR>
