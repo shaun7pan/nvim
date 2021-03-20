@@ -54,7 +54,7 @@ nnoremap <silent> <Leader>ce  :Clap coc_diagnostics<CR>
 " Manage extensions
 nnoremap <silent> <Leader>;   :Clap coc_extensions<CR>
 " Show commands
-nnoremap <silent> <Leader>,   :Clap coc_commands<CR>
+"nnoremap <silent> <Leader>,   :Clap coc_commands<CR>
 " Search workspace symbols
 nnoremap <silent> <Leader>cs  :Clap coc_symbols<CR>
 nnoremap <silent> <Leader>cS  :Clap coc_services<CR>
@@ -63,6 +63,8 @@ nnoremap <silent> <leader>ct  :Clap coc_outline<CR>
 "--------------------------"
 "      fzf Keymap          "
 "--------------------------"
+"
+let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 "function! s:find_git_root()
 "  return system('git rev-parse --show-toplevel -1> /dev/null')[:-2]
@@ -79,8 +81,16 @@ function! RipgrepFzf(query, fullscreen)
 endfunction
 
 command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
+"ag only content without file name
+command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0)
+command! -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>),
+  \   1,
+  \   fzf#vim#with_preview({'options': '--delimiter : --nth 2..'}))
 
 nnoremap <silent> <C-x><C-f> :Files<CR>
+nnoremap <silent> <C-x><C-g> :GFiles<CR>
 nnoremap <silent> <C-x><C-h> :History<CR>
 nnoremap <silent> <C-x><C-b> :Buffers<CR>
 nnoremap <silent> <C-x><C-a> :Ag<CR>
@@ -91,3 +101,60 @@ nnoremap <silent> <C-x><C-t> :BTags<CR>
 nnoremap <silent> <C-x><C-m> :History:<CR>
 nnoremap <silent> <C-x><C-n> :History/<CR>
 nnoremap <silent> <C-Space> :call fzf#run(fzf#wrap({'source': 'find $HOME/development -maxdepth 1 -type d', 'sink': 'Files'}))<CR>
+" The query history for this command will be stored as 'ls' inside g:fzf_history_dir.
+" The name is ignored if g:fzf_history_dir is not defined.
+command! -bang -complete=dir -nargs=? LS
+    \ call fzf#run(fzf#wrap('ls', {'source': 'ls', 'dir': <q-args>}, <bang>0))
+
+
+"https://github.com/junegunn/fzf.vim/issues/27
+"
+" "Raw" version of ag; arguments directly passed to ag
+"
+" e.g.
+"   " Search 'foo bar' in ~/projects
+"   :Ag "foo bar" ~/projects
+"
+"   " Start in fullscreen mode
+"   :Ag! "foo bar"
+"command! -bang -nargs=+ -complete=file Ag call fzf#vim#ag_raw(<q-args>, <bang>0)
+command! -bang -nargs=+ -complete=file AgRaw call fzf#vim#ag_raw(<q-args>, fzf#vim#with_preview('right:50%:hidden', '?'), <bang>0)
+
+
+"https://github.com/junegunn/fzf.vim/issues/346
+"
+" AgIn: Start ag in the specified directory
+"
+" e.g.
+"   :AgIn .. foo
+function! s:ag_in(bang, ...)
+  if !isdirectory(a:1)
+    throw 'not a valid directory: ' .. a:1
+  endif
+  " Press `?' to enable preview window.
+  call fzf#vim#ag(join(a:000[1:], ' '), fzf#vim#with_preview({'dir': a:1, 'options': '--delimiter : --nth 4..'}, 'right:50%:hidden', '?'), a:bang)
+
+  " If you don't want preview option, use this
+  " call fzf#vim#ag(join(a:000[1:], ' '), {'dir': a:1}, a:bang)
+endfunction
+
+command! -bang -nargs=+ -complete=dir AgIn call s:ag_in(<bang>0, <f-args>)
+nnoremap <silent> <Space>ag<Space> :call fzf#run(fzf#wrap({'source': 'find $HOME/development -maxdepth 1 -type d', 'sink': 'AgIn'}))<CR>
+
+
+function! s:fzf_neighbouring_files(bang)
+  let current_file =expand("%")
+  let cwd = fnamemodify(current_file, ':p:h')
+  let command = 'ag -g "" -f ' . cwd . ' --depth 0'
+
+  call fzf#run(fzf#wrap({
+        \ 'source': command,
+        \ 'sink':   'e',
+        \ 'options': '-m -x +s',
+        \ 'down': '20%'
+        \  }))
+endfunction
+
+command! -bang -nargs=* -complete=file FZFNeigh call s:fzf_neighbouring_files(<bang>0)
+nnoremap <silent> <Space>na<Space> :FZFNeigh<CR>
+

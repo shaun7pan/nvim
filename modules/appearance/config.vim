@@ -4,8 +4,8 @@
 "--------------------------"
 nnoremap  [b :<C-u>bp<CR>
 nnoremap  ]b :<C-u>bn<CR>
-nnoremap <silent> <Leader>bc :Bonly<CR>
-nnoremap <silent> <Leader>bx :Bw<CR>
+nnoremap <silent> <Space>bo<Space> :Bonly<CR>
+nnoremap <silent> <Space>bw<Space> :Bw<CR>
 nmap <leader>1 <Plug>BuffetSwitch(1)
 nmap <leader>2 <Plug>BuffetSwitch(2)
 nmap <leader>3 <Plug>BuffetSwitch(3)
@@ -173,7 +173,7 @@ nnoremap <silent> <Leader>e
 nnoremap <silent> <Leader>F
   \ :<C-u>Defx -resume -buffer-name=tab`tabpagenr()` -search=`expand('%:p')`<CR>
 
-nnoremap <silent> <Leader>b
+nnoremap <silent> <Leader>,
   \ :<C-u>Defx `escape(expand('%:p:h'), ' :')` -search=`expand('%:p')`<CR>
 
 
