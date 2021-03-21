@@ -158,3 +158,15 @@ endfunction
 command! -bang -nargs=* -complete=file FZFNeigh call s:fzf_neighbouring_files(<bang>0)
 nnoremap <silent> <Space>na<Space> :FZFNeigh<CR>
 
+nnoremap <silent> <Space>j<Space> :call fzf#run(fzf#wrap({'source': 'find $HOME -maxdepth 2 -type d', 'sink': 'cd'}))<CR>
+
+"Usage: ':e <c-x><c-d> enter  -- select dir -- back to command mode
+function! s:append_dir_with_fzf(line)
+  call fzf#run(fzf#wrap({
+    \ 'options': ['--prompt', a:line.'> '],
+    \ 'source': 'find . -type d',
+    \ 'sink': {line -> feedkeys("\<esc>:".a:line.line, 'n')}}))
+  return ''
+endfunction
+
+cnoremap <expr> <c-x><c-d> <sid>append_dir_with_fzf(getcmdline())

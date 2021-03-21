@@ -2,12 +2,11 @@
 nnoremap <LEADER>vi :e $MYVIMRC<CR>
 map E $
 map B ^
-nnoremap <leader>w :bd<CR>
 " map jk to ESC
 inoremap jk <Esc>
 " See plugin/bufkill.vim
 " use emacs keybind
-nmap <C-x>k :BD<CR>
+nmap <Space>bd<Space> :BD<CR>
 "Write buffer (save)
 nnoremap <C-S> :<C-u>write<CR>
 nnoremap <C-Q> :q!<CR>

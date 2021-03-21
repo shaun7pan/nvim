@@ -168,7 +168,7 @@ let g:defx_icons_column_length = 1
 let g:defx_icons_mark_icon = ''
 
 nnoremap <silent> <Leader>e
-  \ :<C-u>Defx -resume -toggle -buffer-name=tab`tabpagenr()`<CR>
+  \ :<C-u>Defx . -resume -toggle -buffer-name=tab`tabpagenr()`<CR>
 
 nnoremap <silent> <Leader>F
   \ :<C-u>Defx -resume -buffer-name=tab`tabpagenr()` -search=`expand('%:p')`<CR>
