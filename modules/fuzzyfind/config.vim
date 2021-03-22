@@ -89,17 +89,17 @@ command! -nargs=* Rg
   \   1,
   \   fzf#vim#with_preview({'options': '--delimiter : --nth 2..'}))
 
-nnoremap <silent> <C-x><C-f> :Files<CR>
-nnoremap <silent> <C-x><C-g> :GFiles<CR>
-nnoremap <silent> <C-x><C-h> :History<CR>
-nnoremap <silent> <C-x><C-b> :Buffers<CR>
-nnoremap <silent> <C-x><C-a> :Ag<CR>
-nnoremap <silent> <C-x><C-r> :RG<CR>
-nnoremap <silent> <C-x><C-l> :Lines<CR>
-nnoremap <silent> <C-x><C-t> :BTags<CR>
+nnoremap <silent> <Space>f<Space> :Files<CR>
+nnoremap <silent> <Space>gf<Space> :GFiles<CR>
+nnoremap <silent> <Space>h<Space> :History<CR>
+nnoremap <silent> <Space>b<Space> :Buffers<CR>
+nnoremap <silent> <Space>ag<Space> :Ag<CR>
+nnoremap <silent> <Space>rg<Space> :RG<CR>
+nnoremap <silent> <Space>l<Space> :Lines<CR>
+nnoremap <silent> <Space>t<Space> :BTags<CR>
 "
-nnoremap <silent> <C-x><C-m> :History:<CR>
-nnoremap <silent> <C-x><C-n> :History/<CR>
+nnoremap <silent> <Space>m<Space> :History:<CR>
+nnoremap <silent> <Space>n<Space> :History/<CR>
 nnoremap <silent> <C-Space> :call fzf#run(fzf#wrap({'source': 'find $HOME/development -maxdepth 1 -type d', 'sink': 'Files'}))<CR>
 " The query history for this command will be stored as 'ls' inside g:fzf_history_dir.
 " The name is ignored if g:fzf_history_dir is not defined.
@@ -139,7 +139,7 @@ function! s:ag_in(bang, ...)
 endfunction
 
 command! -bang -nargs=+ -complete=dir AgIn call s:ag_in(<bang>0, <f-args>)
-nnoremap <silent> <Space>ag<Space> :call fzf#run(fzf#wrap({'source': 'find $HOME/development -maxdepth 1 -type d', 'sink': 'AgIn'}))<CR>
+nnoremap <silent> <Space>agi<Space> :call fzf#run(fzf#wrap({'source': 'find $HOME/development -maxdepth 1 -type d', 'sink': 'AgIn'}))<CR>
 
 
 function! s:fzf_neighbouring_files(bang)
