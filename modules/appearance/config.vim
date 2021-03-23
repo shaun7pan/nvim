@@ -178,3 +178,8 @@ nnoremap <silent> <Leader>,
 
 
 let g:airline_powerline_fonts = 1
+
+
+"vim-startify
+"
+let g:startify_bookmarks = [ '~/.profile', '~/.config/nvim/modules/fuzzyfind/config.vim' ]

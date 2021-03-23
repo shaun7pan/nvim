@@ -32,7 +32,8 @@ Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'hardcoreplayers/oceanic-material'
 
 
-Plug 'hardcoreplayers/dashboard-nvim'
+"Plug 'hardcoreplayers/dashboard-nvim'
+Plug 'mhinz/vim-startify'
 
 
 "Plug 'glepnir/spaceline.vim'
