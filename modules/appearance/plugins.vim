@@ -1,6 +1,3 @@
-
-
-
 Plug 'drewtempelmeyer/palenight.vim'
 
 Plug 'rakr/vim-one'

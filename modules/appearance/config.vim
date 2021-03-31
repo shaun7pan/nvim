@@ -182,4 +182,8 @@ let g:airline_powerline_fonts = 1
 
 "vim-startify
 "
-let g:startify_bookmarks = [ '~/.profile', '~/.config/nvim/modules/fuzzyfind/config.vim' ]
+let g:startify_bookmarks = [ '~/.profile',
+            \ '~/.config/nvim/modules/fuzzyfind/config.vim',
+            \ '~/.tmux.conf',
+            \ '~/.tmux.conf.local',
+            \ '~/.tmux.conf.bak']

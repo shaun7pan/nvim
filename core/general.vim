@@ -295,3 +295,6 @@ map sh :set nosplitright <CR> :vsplit <CR>
 " conflict with textobj
 map sj :set splitbelow <CR> :split <CR>
 map sk :set nosplitbelow <CR> :split <CR>
+
+" save on leave insertmode
+au InsertLeave * write

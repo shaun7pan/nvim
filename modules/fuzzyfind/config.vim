@@ -92,7 +92,7 @@ command! -nargs=* Rg
 nnoremap <silent> <Space>f<Space> :Files<CR>
 nnoremap <silent> <Space>gf<Space> :GFiles<CR>
 nnoremap <silent> <Space>h<Space> :History<CR>
-nnoremap <silent> <Space>b<Space> :Buffers<CR>
+nnoremap <silent> <Space><Space> :Buffers<CR>
 nnoremap <silent> <Space>ag<Space> :Ag<CR>
 nnoremap <silent> <Space>rg<Space> :RG<CR>
 nnoremap <silent> <Space>l<Space> :Lines<CR>

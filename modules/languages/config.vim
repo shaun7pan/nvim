@@ -24,3 +24,7 @@ call coc#config('languageserver', {
 
 let g:python_highlight_all = 1
 call coc#add_extension('coc-python')
+
+
+" vim-terraform
+let g:terraform_fmt_on_save=1

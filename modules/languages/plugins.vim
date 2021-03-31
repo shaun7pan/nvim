@@ -12,3 +12,4 @@ Plug 'raimon49/requirements.txt.vim',{'for': 'python'}
 
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'hashivim/vim-terraform'
