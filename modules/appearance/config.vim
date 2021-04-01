@@ -187,3 +187,5 @@ let g:startify_bookmarks = [ '~/.profile',
             \ '~/.tmux.conf',
             \ '~/.tmux.conf.local',
             \ '~/.tmux.conf.bak']
+
+nnoremap <silent> <Space>st<Space> :Startify<CR>

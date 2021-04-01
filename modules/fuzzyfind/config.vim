@@ -89,7 +89,7 @@ command! -nargs=* Rg
   \   1,
   \   fzf#vim#with_preview({'options': '--delimiter : --nth 2..'}))
 
-nnoremap <silent> <Space>f<Space> :Files<CR>
+nnoremap <silent> <Space>k<Space> :Files<CR>
 nnoremap <silent> <Space>gf<Space> :GFiles<CR>
 nnoremap <silent> <Space>h<Space> :History<CR>
 nnoremap <silent> <Space><Space> :Buffers<CR>
