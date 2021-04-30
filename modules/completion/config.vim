@@ -76,7 +76,7 @@ nmap <Leader>cF  <Plug>(coc-fix-current)
 " Remap keys for gotos
 nmap <silent> gd :<C-u>call initself#definition_other_window()<CR>
 nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> <Leader>ci <Plug>(coc-implementation)
+nmap <silent> <space>gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 " Use K for show documentation in float window
 nnoremap <silent> <leader>k :call CocActionAsync('doHover')<CR>

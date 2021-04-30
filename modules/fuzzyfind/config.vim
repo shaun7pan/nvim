@@ -170,3 +170,9 @@ function! s:append_dir_with_fzf(line)
 endfunction
 
 cnoremap <expr> <c-x><c-d> <sid>append_dir_with_fzf(getcmdline())
+"--------------------------"
+"     vim-fzf Keymap      "
+"--------------------------"
+"
+let g:coc_fzf_preview = ''
+let g:coc_fzf_opts = []
