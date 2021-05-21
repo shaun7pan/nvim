@@ -176,3 +176,4 @@ cnoremap <expr> <c-x><c-d> <sid>append_dir_with_fzf(getcmdline())
 "
 let g:coc_fzf_preview = ''
 let g:coc_fzf_opts = []
+nnoremap <silent> <Space>y<Space> :CocFzfList yank<CR>
