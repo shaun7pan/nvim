@@ -1,13 +1,4 @@
-
 {
- "languageserver": {
-    "go": {
-      "command": "gopls",
-      "rootPatterns": ["go.mod"],
-      "trace.server": "verbose",
-      "filetypes": ["go"]
-    }
-  },
   "snippets.ultisnips.directories": [
       "$HOME/.cache/vim/plug/repos/vim-snippets/UltiSnips/",
       "$HOME/.cache/vim/plug/repos/vim-snippets/snippets/",
@@ -47,14 +38,12 @@
     "typeParameter": "\uf728",
     "default": "\uf29c"
   },
-  //diagnostic
   "diagnostic.signOffset": 9999999,
   "diagnostic.errorSign": "●",
   "diagnostic.warningSign": "●",
   "diagnostic.infoSign": "●",
   "diagnostic.displayByAle": false,
   "diagnostic.refreshOnInsertMode": true,
-  //git
   "git.enableGutters": true,
   "git.branchCharacter": "\uf418",
   "git.addGBlameToBufferVar": true,
@@ -70,12 +59,9 @@
   "git.removedSign.text": "▋",
   "git.topRemovedSign.text": "▔",
   "git.changeRemovedSign.text": "▋",
-  //Snippet
   "coc.preferences.snippetStatusText": "Ⓢ ",
-  //CocList
   "list.source.files.defaultOptions": ["--auto-preview"],
   "list.source.outline.defaultOptions": ["--auto-preview"],
-  //prettier
   "coc.preferences.formatOnSaveFiletypes": [
     "html",
     "css",
@@ -92,21 +78,16 @@
   "prettier.tslintIntegration": false,
   "prettier.stylelintIntegration": true,
   "prettier.disableSuccessMessage": true,
-  //emmet
   "emmet.includeLanguages": {
     "vue-html": "html",
     "javascript": "javascriptreact",
     "typescriptreact": "typescriptreact"
   },
-  //imselect
   "imselect.enableStatusItem": false,
-  //multiple curssor
   "cursors.nextKey": "<C-n>",
   "cursors.previousKey": "<C-p>",
   "cursors.cancelKey": "<esc>",
-  //sessions
   "session.directory": "~/.cache/vim/session",
-  // coc-explorer
   "explorer.icon.expanded": "▾",
   "explorer.icon.collapsed": "▸",
   "explorer.width": 30,
@@ -115,7 +96,6 @@
   "explorer.floating.width": -20,
   "explorer.floating.height": -10,
   "explorer.openAction.strategy": "sourceWindow",
-  // eslint
   "eslint.filetypes": [
     "javascript",
     "javascriptreact",
@@ -124,9 +104,7 @@
   ],
   "eslint.autoFix": true,
   "eslint.autoFixOnSave": true,
-  // coc-actions
   "coc-actions.hideCursor": false,
-  // Cspell
   "cSpell.fixSpellingWithRenameProvider": true,
   "cSpell.showStatus": false,
   "cSpell.enabledLanguageIds": [
@@ -162,5 +140,8 @@
     "yaml",
     "yml",
     "vim"
+  ],
+  "cSpell.userWords": [
+    "Bonly"
   ]
 }

@@ -74,7 +74,8 @@ nmap <Leader>cf  <Plug>(coc-format-selected)
 " Fix autofix problem of current line
 nmap <Leader>cF  <Plug>(coc-fix-current)
 " Remap keys for gotos
-nmap <silent> gd :<C-u>call initself#definition_other_window()<CR>
+"nmap <silent> gd :<C-u>call initself#definition_other_window()<CR>
+nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> <space>gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)

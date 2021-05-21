@@ -100,7 +100,7 @@ function! s:defx_mappings() abort
   nnoremap <silent><buffer><expr> l     <sid>defx_toggle_tree()
   nnoremap <silent><buffer><expr> h     defx#async_action('cd', ['..'])
   nnoremap <silent><buffer><expr> st    defx#do_action('multi', [['drop', 'tabnew'], 'quit'])
-  nnoremap <silent><buffer><expr> s     defx#do_action('open', 'botright vsplit')
+  nnoremap <silent><buffer><expr> v     defx#do_action('open', 'botright vsplit')
   nnoremap <silent><buffer><expr> i     defx#do_action('open', 'botright split')
   nnoremap <silent><buffer><expr> P     defx#do_action('preview')
   nnoremap <silent><buffer><expr> K     defx#do_action('new_directory')
@@ -189,3 +189,8 @@ let g:startify_bookmarks = [ '~/.profile',
             \ '~/.tmux.conf.bak']
 
 nnoremap <silent> <Space>st<Space> :Startify<CR>
+
+
+
+"lastbuf
+map <Space>b<Space> :LastBuf<CR>
