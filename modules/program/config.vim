@@ -19,7 +19,7 @@ let g:vista_executive_for = {
   \ 'typescriptreact': 'coc',
   \ }
 
-nnoremap <silent> <Leader>i :<C-u>Vista!!<CR>
+nnoremap <silent> <C-t> :<C-u>Vista!!<CR>
 
 let g:gutentags_cache_dir = $DATA_PATH . '/tags'
 let g:gutentags_project_root = ['.root', '.git', '.svn', '.hg', '.project','go.mod','/usr/local']
