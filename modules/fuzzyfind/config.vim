@@ -30,36 +30,36 @@ autocmd User ClapOnEnter call s:ClapSymbolHL()
 "--------------------------"
 "     vim-clap Keymap      "
 "--------------------------"
-nnoremap <silent> <Leader>tc :<C-u>Clap colors<CR>
-nnoremap <silent> <Leader>bb :<C-u>Clap marks<CR>
-"like emacs counsel-find-file
-nnoremap <silent> <Leader>fa :<C-u>Clap grep2<CR>
-nnoremap <silent> <Leader>fb :<C-u>Clap buffers<CR>
-nnoremap <silent> <Leader>fd :<C-u>Clap filer<CR>
-nnoremap <silent> <Leader>ff :<C-u>Clap files ++finder=rg --ignore --hidden --files<cr>
-nnoremap <silent> <Leader>fg :<C-u>Clap gfiles<CR>
-nnoremap <silent> <Leader>fw :<C-u>Clap grep ++query=<cword><cr>
-nnoremap <silent> <Leader>fh :<C-u>Clap history<CR>
-nnoremap <silent> <Leader>fW :<C-u>Clap windows<CR>
-nnoremap <silent> <Leader>fl :<C-u>Clap loclist<CR>
-nnoremap <silent> <Leader>fu :<C-u>Clap git_diff_files<CR>
-nnoremap <silent> <Leader>fv :<C-u>Clap grep ++query=@visual<CR>
-nnoremap <silent> <Leader>oc :<C-u>Clap personalconf<CR>
-
-"--------------------------"
-"     coc-clap Keymap      "
-"--------------------------"
-" Show all diagnostics
-nnoremap <silent> <Leader>ce  :Clap coc_diagnostics<CR>
-" Manage extensions
-nnoremap <silent> <Leader>;   :Clap coc_extensions<CR>
-" Show commands
-"nnoremap <silent> <Leader>,   :Clap coc_commands<CR>
-" Search workspace symbols
-nnoremap <silent> <Leader>cs  :Clap coc_symbols<CR>
-nnoremap <silent> <Leader>cS  :Clap coc_services<CR>
-nnoremap <silent> <leader>ct  :Clap coc_outline<CR>
-
+"nnoremap <silent> <Leader>tc :<C-u>Clap colors<CR>
+"nnoremap <silent> <Leader>bb :<C-u>Clap marks<CR>
+""like emacs counsel-find-file
+"nnoremap <silent> <Leader>fa :<C-u>Clap grep2<CR>
+"nnoremap <silent> <Leader>fb :<C-u>Clap buffers<CR>
+"nnoremap <silent> <Leader>fd :<C-u>Clap filer<CR>
+"nnoremap <silent> <Leader>ff :<C-u>Clap files ++finder=rg --ignore --hidden --files<cr>
+"nnoremap <silent> <Leader>fg :<C-u>Clap gfiles<CR>
+"nnoremap <silent> <Leader>fw :<C-u>Clap grep ++query=<cword><cr>
+"nnoremap <silent> <Leader>fh :<C-u>Clap history<CR>
+"nnoremap <silent> <Leader>fW :<C-u>Clap windows<CR>
+"nnoremap <silent> <Leader>fl :<C-u>Clap loclist<CR>
+"nnoremap <silent> <Leader>fu :<C-u>Clap git_diff_files<CR>
+"nnoremap <silent> <Leader>fv :<C-u>Clap grep ++query=@visual<CR>
+"nnoremap <silent> <Leader>oc :<C-u>Clap personalconf<CR>
+"
+""--------------------------"
+""     coc-clap Keymap      "
+""--------------------------"
+"" Show all diagnostics
+"nnoremap <silent> <Leader>ce  :Clap coc_diagnostics<CR>
+"" Manage extensions
+"nnoremap <silent> <Leader>;   :Clap coc_extensions<CR>
+"" Show commands
+""nnoremap <silent> <Leader>,   :Clap coc_commands<CR>
+"" Search workspace symbols
+"nnoremap <silent> <Leader>cs  :Clap coc_symbols<CR>
+"nnoremap <silent> <Leader>cS  :Clap coc_services<CR>
+"nnoremap <silent> <leader>ct  :Clap coc_outline<CR>
+"
 "--------------------------"
 "      fzf Keymap          "
 "--------------------------"
@@ -93,7 +93,7 @@ nnoremap <silent> <Space>k<Space> :Files<CR>
 nnoremap <silent> <Space>gf<Space> :GFiles<CR>
 nnoremap <silent> <Space>h<Space> :History<CR>
 nnoremap <silent> <Space><Space> :Buffers<CR>
-nnoremap <silent> <Space>ag<Space> :Ag<CR>
+nnoremap <silent> <Space>ag<Space> :Ag <C-R><C-W><CR>
 nnoremap <silent> <Space>rg<Space> :RG<CR>
 nnoremap <silent> <Space>l<Space> :Lines<CR>
 nnoremap <silent> <Space>t<Space> :BTags<CR>
