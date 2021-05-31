@@ -1,7 +1,7 @@
 
 Plug  'hardcoreplayers/go-nvim' , {'for' : ['go','gomod']}
 
-Plug 'vim-ruby/vim-ruby' ,{'for' : 'ruby'}
+"Plug 'vim-ruby/vim-ruby' ,{'for' : 'ruby'}
 
 Plug 'arzg/vim-sh', {'for': [ 'sh','zsh' ]}
 

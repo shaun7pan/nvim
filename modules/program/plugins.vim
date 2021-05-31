@@ -12,3 +12,4 @@ if executable('ctags')
 endif
 
 Plug 'thinca/vim-quickrun',{'on': 'QuickRun'}
+Plug 'preservim/nerdcommenter'

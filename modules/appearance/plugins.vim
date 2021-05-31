@@ -45,4 +45,5 @@ Plug 'kristijanhusak/defx-icons'
 Plug 'kristijanhusak/defx-git'
 
 Plug 'gu-fan/lastbuf.vim'
+" Plug 'severin-lemaignan/vim-minimap'
 
