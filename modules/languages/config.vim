@@ -23,7 +23,7 @@ call coc#config('languageserver', {
 	\})
 
 let g:python_highlight_all = 1
-call coc#add_extension('coc-python')
+"call coc#add_extension('coc-python')
 
 
 " vim-terraform

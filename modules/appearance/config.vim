@@ -71,6 +71,7 @@ augroup user_plugin_defx
 
 augroup END
 
+
 " Internal functions
 " ---
 function! s:jump_dirty(dir) abort
@@ -91,6 +92,17 @@ function! s:defx_toggle_tree() abort
   endif
   return defx#do_action('multi', ['drop'])
 endfunction
+
+"打开vim自动打开defx
+func! ArgFunc() abort
+    let s:arg = argv(0)
+    if isdirectory(s:arg)
+        return s:arg
+    else
+        return fnamemodify(s:arg, ':h')
+    endif
+endfunc
+autocmd VimEnter * Defx `ArgFunc()` -no-focus -search=`expand('%:p')`
 
 function! s:defx_mappings() abort
   " Defx window keyboard mappings
