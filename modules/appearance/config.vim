@@ -102,7 +102,7 @@ func! ArgFunc() abort
         return fnamemodify(s:arg, ':h')
     endif
 endfunc
-autocmd VimEnter * Defx . `ArgFunc()` -resume -toggle -no-focus -buffer-name=tab`tabpagenr()`
+autocmd VimEnter * Defx `ArgFunc()` -resume -toggle -no-focus -buffer-name=tab`tabpagenr()`
 
 function! s:defx_mappings() abort
   " Defx window keyboard mappings
