@@ -102,6 +102,7 @@ command! -nargs=0 OR  :call CocAction('runCommand', 'editor.action.organizeImpor
 autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
 
 nnoremap <silent> <Leader>co :<C-u>OR<CR>
+
 " multiple cursors
 nmap <silent><M-s> <Plug>(coc-cursors-position)
 nmap <expr> <silent><M-d> initself#select_current_word()

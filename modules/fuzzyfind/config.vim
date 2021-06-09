@@ -100,7 +100,7 @@ nnoremap <silent> <Space>t<Space> :BTags<CR>
 "
 nnoremap <silent> <Space>m<Space> :History:<CR>
 nnoremap <silent> <Space>n<Space> :History/<CR>
-nnoremap <silent> <C-Space> :call fzf#run(fzf#wrap({'source': 'find $HOME/development -maxdepth 1 -type d', 'sink': 'Files'}))<CR>
+nnoremap <silent> <C-Space> :call fzf#run(fzf#wrap({'source': 'find $HOME -maxdepth 2 -type d', 'sink': 'Files'}))<CR>
 " The query history for this command will be stored as 'ls' inside g:fzf_history_dir.
 " The name is ignored if g:fzf_history_dir is not defined.
 command! -bang -complete=dir -nargs=? LS
